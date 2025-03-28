@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        const calcularTotal = (preco, quantidade) => preco*quantidade;
+        
+
+        const aplicarDesconto = (preco, quantidade) => {
+            const compra = calcularTotal(preco,quantidade);
+            return compra > 100 ? compra*0.9 : compra;
+        } 
+        
+        const exibirResumo = (preco, quantidade) => {
+            console.log(`${quantidade} itens foram comprados no valor unitário de R$${preco}`);
+            if (aplicarDesconto(preco,quantidade) > 100){
+                console.log(`Valor total da compra sem desconto: R$${calcularTotal(preco,quantidade)}`);
+                console.log(`Valor total da compra com desconto: R$${aplicarDesconto(preco,quantidade)}`);
+            } else{
+                console.log(`Valor total da compra: R$${calcularTotal(preco,quantidade)}`);
+                console.log("Não aplica-se desconto para esta compra");
+            }
+            
+            
+        }         
+        
+        const preco = prompt("Qual o preço do produto?");
+        const quantidade = prompt("Quantos deseja comprar?");
+        exibirResumo(preco, quantidade)
+
+    </script>
+</body>
+</html>
