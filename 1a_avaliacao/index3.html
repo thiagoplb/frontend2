@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+       
+        let npair = 0
+        let nodd = 0 
+        const lenarray = Number(prompt(`Digite quantos números quer receber`));
+        const numbers = new Array(lenarray);
+
+        for (i=0 ; i<lenarray ; i++){
+            numbers[i] = Number(prompt(`Digite o valor do ${i+1}th número:`));
+            
+        }
+
+        console.log(`A lista ${numbers} tem como maior número o ${Math.max(...numbers)} e o menor é o ${Math.min(...numbers)}`);
+        
+
+
+    </script>
+</body>
+</html> 

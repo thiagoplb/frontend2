@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>      
+    
+    let salario = Number(prompt("Digite o valor do primeiro salário: ")); 
+    let percentualAumento = 0.0015; 
+    const anoInicial = 1995;
+    const anoAtual = 2025;
+    
+    salario = salario*(1+percentualAumento);
+
+    for (let ano = 1997; ano <= anoAtual; ano++) {
+        percentualAumento *= 2
+        salario = salario * (1 + percentualAumento);
+       
+    }
+    salario = salario.toFixed(2);
+    console.log(`O salário atual do funcionário é R$ ${salario}`);
+
+    </script>
+</body>
+</html> 

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let numbers = new Array(10);
+        let npair = 0
+        let nodd = 0 
+
+        for (i=0 ; i<=9 ; i++){
+            numbers[i] = prompt(`Digite o valor do número ${i+1}`);
+            if (numbers[i] % 2 == 0){
+                npair++;
+            } 
+            else{
+                nodd++;
+            }
+        }
+
+        console.log(`A lista de números possui ${npair} números pares e ${nodd} números ímpares`);
+        
+
+
+    </script>
+</body>
+</html>

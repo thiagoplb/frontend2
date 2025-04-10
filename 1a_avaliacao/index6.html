@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+    let capital = parseFloat(prompt("Digite o capital inicial (em R$):"));
+    let taxa = parseFloat(prompt("Digite a taxa de juros mensal (em %):"));
+    let tempo = parseInt(prompt("Digite o tempo em meses:"));
+    let taxaDecimal = taxa / 100;
+    let montante = capital * Math.pow((1 + taxaDecimal), tempo);
+    console.log(`O montante final será: R$ ${montante.toFixed(2)}`)
+    </script>
+    
+</body>
+</html>
