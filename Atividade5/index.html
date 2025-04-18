@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+
+
+        const dados = '[{ "nome": "Maria Joaquinha", "notas": [8,7.5,9], "curso": "Sistemas para Internet"}, { "nome": "João Ricardo", "notas": [8,8.5,5], "curso": "Direito"}, { "nome": "José Henrique", "notas": [4,10,7], "curso": "Administração"}, { "nome": "Pedro da Silva", "notas": [6,7.6,7.5], "curso": "Sistemas para Internet"}, { "nome": "Silvana Morais", "notas": [6,7.5,9.5], "curso": "Sistemas de Informação"}, { "nome": "Patricia Castro", "notas": [1,9,10], "curso": "Arquitetura"}, { "nome": "Joana Ribeiro", "notas": [8,9,9], "curso": "Contabilidade"}, { "nome": "Rafael Rocha", "notas": [4,4,9], "curso": "Sistemas para Internet"}, { "nome": "Gustavo Henrique", "notas": [8,7.5,5], "curso": "Sistemas para Internet"} ]';
+        const dadosjson = JSON.parse(dados)
+
+        const exibiralunos = alunos => {
+
+            alunos.forEach(dado => {
+                const soma = dado.notas.reduce((total, nota) => total + nota, 0);
+                const media = soma / dado.notas.length;
+                if (media >= 7){
+
+                console.log(`${dado.nome} (${dado.curso}) - Média: ${media.toFixed(2)}`);
+                }
+
+            });
+        }
+        
+        exibiralunos(dadosjson);
+
+    </script>
+    
+</body>
+</html>
